@@ -118,6 +118,34 @@ export default function LandingPage() {
 						</div>
 						<Link>Learn more about our mission and who we are -></Link>
 					</div>
+
+					<div className="get-involved-section">
+						<div className="row">
+							<div class="col-6 col-md-3"></div>
+							<div class="col-6 col-md-6">
+								<h3>Get Involved</h3>
+								<h4>
+									Join our community for the latest technical specifications, verified suppliers data,
+									and tools to help manage this global health pandemic.
+								</h4>
+								<div className="subscribe">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder="Your Email" />
+										<div class="input-group-append">
+											<button class="btn btn-outline-secondary" type="button">
+												Sign Up
+											</button>
+										</div>
+									</div>
+								</div>
+								<div className="policy">
+									We care about protecting your data. Read our{' '}
+									<Link className="policy-link">Privacy Policy</Link>
+								</div>
+							</div>
+							<div class="col-6 col-md-3"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</>
