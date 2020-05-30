@@ -108,6 +108,17 @@
 			font-weight: 600;
 			text-align: center;
 			letter-spacing: 0.5px;
+
+			a {
+				color: #fff;
+			}
+
+			&:hover {
+				background-color: #fff;
+				a {
+					-webkit-text-fill-color: #2f80ed !important;
+				}
+			}
 		}
 	}
 	.section-three {
