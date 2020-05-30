@@ -367,6 +367,48 @@
 				}
 			}
 		}
+		.footer {
+			.footer-wrap {
+				margin-top: 6rem;
+				margin-bottom: 4rem;
+				display: flex;
+				justify-content: space-between;
+
+				h5 {
+					margin-bottom: 32px;
+					color: #6984a3;
+					font-weight: 400;
+					font-size: 15px;
+				}
+
+				h6 {
+					a {
+						color: #6984a3;
+						font-weight: 300;
+						font-size: 15px;
+					}
+				}
+
+				.copyright {
+					margin-top: 100%;
+					margin-bottom: 8px;
+					color: #a5b9d0;
+					font-size: 14px;
+					line-height: 21px;
+					font-weight: 400;
+				}
+
+				.sec-5 {
+					h6 {
+						display: flex;
+						img {
+							width: 8%;
+							margin-right: 4px;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
