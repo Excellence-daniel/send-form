@@ -25,7 +25,7 @@ export default function Header() {
 					<button className="link-button">
 						<Link to="">Log in</Link>
 					</button>
-					<button className="request-button">Request</button>
+					<button className="request-supply-button">Request</button>
 					<button className="supply-button">Supply</button>
 				</div>
 			</div>

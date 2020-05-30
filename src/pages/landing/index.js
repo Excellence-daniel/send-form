@@ -102,6 +102,21 @@ export default function LandingPage() {
 					<div className="how-it-works">
 						<h4>How it works</h4>
 						<Processes />
+
+						<center>
+							<button className="request-button">Request Medical Equipments</button>
+						</center>
+					</div>
+
+					<div className="about-us-card">
+						<div className="subtitle">About us</div>
+						<div className="big-text">
+							<h2>
+								We’re focused on accelerating the delivery of life saving medical supplies during
+								COVID-19.
+							</h2>
+						</div>
+						<Link>Learn more about our mission and who we are -></Link>
 					</div>
 				</div>
 			</div>
