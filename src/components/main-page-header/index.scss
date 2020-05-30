@@ -24,6 +24,10 @@
 		li {
 			display: inline;
 			padding: 10px;
+
+			@include screen(small) {
+				padding: 6px;
+			}
 		}
 	}
 	.actions-section {

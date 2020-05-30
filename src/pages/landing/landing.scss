@@ -9,6 +9,11 @@
 			text-transform: uppercase;
 			color: #2f80ed;
 			line-height: 24px;
+
+			@include screen(small) {
+				font-size: 14px;
+				line-height: 0;
+			}
 		}
 
 		h2 {
@@ -16,6 +21,10 @@
 			font-size: 38px;
 			line-height: 60px;
 			font-weight: 600;
+
+			@include screen(small) {
+				font-size: 25px;
+			}
 		}
 		.side-one-note {
 			font-size: 24px;
@@ -23,6 +32,12 @@
 			margin-bottom: 32px;
 			line-height: 36px;
 			color: #6984a3;
+
+			@include screen(small) {
+				font-size: 14px;
+				line-height: 30px;
+				width: 70%;
+			}
 		}
 
 		h6 {
@@ -69,6 +84,10 @@
 			color: #fff;
 			font-weight: 400;
 			font-size: 20px;
+
+			@include screen(small) {
+				font-size: 13px;
+			}
 		}
 		.supply-button {
 			margin-left: 32px;
@@ -133,13 +152,19 @@
 		.dashed-equipments {
 			background-color: rgba(47, 128, 237, 0.05);
 			text-align: center;
-			padding: 6rem;
+			padding: 5rem;
 
 			h2 {
 				font-size: 40px;
 				font-weight: 700;
 				line-height: 60px;
 				margin-bottom: 3rem;
+
+				@include screen(small) {
+					line-height: 38px;
+					font-size: 21px;
+					margin-bottom: 2rem;
+				}
 			}
 
 			h4 {
@@ -148,6 +173,12 @@
 				line-height: 36px;
 				font-size: 24px;
 				letter-spacing: 1px;
+
+				@include screen(small) {
+					line-height: 28px;
+					font-size: 15px;
+					letter-spacing: 0px;
+				}
 			}
 			.equipment-types {
 				display: flex;
@@ -186,6 +217,11 @@
 				font-size: 27px;
 				font-weight: 700;
 				margin-top: 7rem;
+
+				@include screen(small) {
+					font-size: 18px;
+					margin-top: 6rem;
+				}
 			}
 
 			.step {
@@ -202,16 +238,38 @@
 				-ms-flex: 1;
 				flex: 1;
 
+				flex-wrap: wrap;
+				flex-direction: column;
+				padding-left: 15rem;
+
+				@include screen(small) {
+					padding: 4rem;
+					margin-top: 0 !important;
+				}
+
 				h6 {
 					text-transform: uppercase;
 					color: #2f80ed;
 					margin-top: 8px;
 					margin-bottom: 8px;
+
+					@include screen(small) {
+						font-size: 14px;
+					}
+				}
+
+				.sides {
+					display: flex;
 				}
 
 				.side-left {
 					width: 27%;
 					margin-right: 5%;
+
+					@include screen(small) {
+						width: 100%;
+						// padding: 1.5rem;
+					}
 
 					.main-text {
 						font-weight: 700;
@@ -219,6 +277,12 @@
 						margin-bottom: 32px;
 						font-size: 40px;
 						line-height: 60px;
+
+						@include screen(small) {
+							font-size: 23px;
+							width: 64%;
+							line-height: 34px;
+						}
 					}
 
 					.sub-text {
@@ -227,6 +291,12 @@
 						font-size: 24px;
 						line-height: 36px;
 						font-weight: 300;
+
+						@include screen(small) {
+							font-size: 15px;
+							width: 80%;
+							line-height: 27px;
+						}
 					}
 				}
 
@@ -234,12 +304,20 @@
 					img {
 						width: 70%;
 					}
+
+					@include screen(small) {
+						display: none;
+					}
 				}
 			}
 
 			button {
 				margin-top: 5rem;
 				margin-bottom: 3rem;
+
+				@include screen(small) {
+					margin-top: 0 !important;
+				}
 			}
 		}
 
@@ -263,12 +341,22 @@
 			align-items: flex-start;
 			border-radius: 16px;
 			background-color: rgba(47, 128, 237, 0.1);
+
+			@include screen(small) {
+				max-width: 100% !important;
+				left: 0 !important;
+			}
+
 			.subtitle {
 				color: #2f80ed;
 				letter-spacing: 1px;
 				text-transform: uppercase;
 				margin-top: 8px;
 				margin-bottom: 8px;
+
+				@include screen(small) {
+					font-size: 14px;
+				}
 			}
 			.big-text {
 				h2 {
@@ -277,6 +365,12 @@
 					font-size: 40px;
 					line-height: 60px;
 					margin-bottom: 32px;
+
+					@include screen(small) {
+						font-size: 22px;
+						line-height: 38px;
+						margin-bottom: 28px;
+					}
 				}
 			}
 
@@ -295,7 +389,13 @@
 		.get-involved-section {
 			text-align: center;
 			background-color: rgba(47, 128, 237, 0.05);
-			padding: 7rem;
+			margin-top: 7rem;
+			margin-bottom: 7rem;
+			padding: 3rem;
+
+			@include screen(small) {
+				margin-top: 6rem;
+			}
 
 			h3 {
 				color: #2f80ed;
@@ -303,6 +403,11 @@
 				font-size: 32px;
 				line-height: 48px;
 				margin-bottom: 25px;
+
+				@include screen(small) {
+					font-size: 22px;
+					margin-bottom: 20px;
+				}
 			}
 			h4 {
 				margin-bottom: 32px;
@@ -310,11 +415,20 @@
 				font-size: 24px;
 				line-height: 36px;
 				font-weight: 200;
+
+				@include screen(small) {
+					font-size: 15px;
+					line-height: 30px;
+				}
 			}
 			.subscribe {
 				.input-group {
 					width: 35%;
 					margin: 1em auto;
+
+					@include screen(small) {
+						width: 70%;
+					}
 
 					input {
 						height: 56px;
@@ -356,6 +470,10 @@
 				font-weight: 200;
 				margin-top: 2rem;
 
+				@include screen(small) {
+					font-size: 14px;
+				}
+
 				.policy-link {
 					border-bottom: 1px solid #006dff;
 					transition: color 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -364,21 +482,45 @@
 					padding-top: 4px;
 					padding-bottom: 4px;
 					font-weight: 200;
+
+					@include screen(small) {
+						font-size: 14px;
+					}
 				}
 			}
 		}
 		.footer {
+			.row {
+				align-items: baseline;
+			}
 			.footer-wrap {
 				margin-top: 6rem;
 				margin-bottom: 4rem;
-				display: flex;
-				justify-content: space-between;
+				justify-content: center;
+
+				@include screen(small) {
+					padding: 3rem;
+					margin-top: -2rem !important;
+					display: flex; 
+				}
+
+				.logo {
+					img {
+						@include screen(small) {
+							width: 4rem;
+						}
+					}
+				}
 
 				h5 {
 					margin-bottom: 32px;
 					color: #6984a3;
 					font-weight: 400;
 					font-size: 15px;
+
+					@include screen(small) {
+						font-size: 12px;
+					}
 				}
 
 				h6 {
@@ -386,6 +528,11 @@
 						color: #6984a3;
 						font-weight: 300;
 						font-size: 15px;
+
+						@include screen(small) {
+							font-size: 12px;
+							line-height: 22px;
+						}
 					}
 				}
 
@@ -396,14 +543,27 @@
 					font-size: 14px;
 					line-height: 21px;
 					font-weight: 400;
+
+					@include screen(small) {
+						font-size: 11px;
+					}
 				}
 
-				.sec-5 {
-					h6 {
-						display: flex;
-						img {
-							width: 8%;
-							margin-right: 4px;
+				.col {
+					&.sec-5 {
+						@include screen(small) {
+							flex-basis: 60px;
+						}
+
+						h6 {
+							display: flex;
+							img {
+								width: 14%;
+								margin-right: 4px;
+								@include screen(small) {
+									width: 17px;
+								}
+							}
 						}
 					}
 				}

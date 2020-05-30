@@ -7,10 +7,10 @@ export default function Header() {
 	return (
 		<div className="container-fluid main-page-header">
 			<div className="row">
-				<div className="logo-section col-md-4 col-sm-6">
+				<div className="logo-section col-5 col-md-4">
 					<img src={LogoSvg} className="logo-svg" alt="response logo" />
 				</div>
-				<div className="menu-section col-md-4 col-sm-6">
+				<div className="menu-section col-7 col-md-4">
 					<Link>
 						<li>Group Purchasing</li>
 					</Link>
