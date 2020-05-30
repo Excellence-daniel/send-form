@@ -4,6 +4,7 @@ import Header from '../../components/main-page-header';
 import PictureOne from './images/pic-1.png';
 import './landing.scss';
 import Equipments from '../../components/equipments';
+import Processes from '../../components/processes';
 
 export default function LandingPage() {
 	return (
@@ -96,6 +97,11 @@ export default function LandingPage() {
 						<div className="coming-soon-equipments">
 							<button> 25+ More Classes of Goods Coming Soon</button>
 						</div>
+					</div>
+
+					<div className="how-it-works">
+						<h4>How it works</h4>
+						<Processes />
 					</div>
 				</div>
 			</div>
