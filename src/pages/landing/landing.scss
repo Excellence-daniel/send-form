@@ -1,6 +1,7 @@
 @import '../../assets/css/partials/mixins';
 
 .main-page {
+	padding-top: 6rem;
 	.section-one {
 		margin-bottom: 5rem;
 		h5 {
@@ -501,7 +502,7 @@
 				@include screen(small) {
 					padding: 3rem;
 					margin-top: -2rem !important;
-					display: flex; 
+					display: flex;
 				}
 
 				.logo {
