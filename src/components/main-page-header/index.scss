@@ -2,20 +2,10 @@
 
 .main-page-header {
 	padding: 1rem;
-	// display: flex;
-	// justify-content: space-between;
 	align-items: center;
+	padding-bottom: 6rem;
 
 	a {
-		color: #282b31;
-		font-size: 16px;
-		line-height: 24px;
-		font-weight: 400;
-		&:hover {
-			text-decoration: none;
-			color: #2f80ed;
-		}
-
 		@include screen(small) {
 			font-size: 12px;
 		}
@@ -42,27 +32,6 @@
 
 		@include screen(small) {
 			display: none;
-		}
-
-		button {
-			border: none;
-			padding: 8px 16px;
-			border-radius: 4px;
-			background-color: #2f80ed;
-			-webkit-transition: background-color 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-			transition: background-color 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-			color: #fff;
-			font-size: 14px;
-			line-height: 21px;
-			text-align: center;
-			display: inline-block;
-			background-color: #3898ec;
-			color: #fff;
-			border: 0;
-			line-height: inherit;
-			text-decoration: none;
-			cursor: pointer;
-			border-radius: 1px;
 		}
 
 		.request-button {
