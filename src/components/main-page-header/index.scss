@@ -13,7 +13,7 @@
 
 	a {
 		@include screen(small) {
-			font-size: 12px;
+			font-size: 10px;
 		}
 	}
 
@@ -32,7 +32,7 @@
 			padding: 10px;
 
 			@include screen(small) {
-				padding: 6px;
+				padding: 5px;
 			}
 		}
 	}
