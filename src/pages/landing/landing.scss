@@ -177,12 +177,23 @@
 				display: flex;
 				justify-content: center;
 				margin-top: 3rem;
+				margin-bottom: 2rem;
 				.equipment {
 					padding: 2rem;
 					img {
 						width: 56px;
 						height: 56px;
 					}
+				}
+			}
+			.coming-soon-equipments {
+				button {
+					padding: 16px 32px;
+					background-color: #eaf2fd;
+					font-size: 20px;
+					line-height: 30px;
+					color: #2f80ed;
+					font-weight: 600;
 				}
 			}
 		}
