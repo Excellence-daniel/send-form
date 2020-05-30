@@ -195,6 +195,11 @@
 					img {
 						width: 56px;
 						height: 56px;
+
+						@include screen(small) {
+							width: 40px;
+							height: 40px;
+						}
 					}
 
 					@include screen(small) {
