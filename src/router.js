@@ -1,6 +1,11 @@
 import React from 'react';
-import { BrowserRoute as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Header from './components/main-page-header';
 
 export default function Routerr() {
-	return <></>;
+	return (
+		<Router>
+			<Header />
+		</Router>
+	);
 }
