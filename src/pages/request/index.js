@@ -23,11 +23,34 @@ class RequestPage extends Component {
 		page: 1,
 		offers: [],
 		disableOfferNextButton: true,
+		firstName: '',
+		lastName: '',
+		email: '',
+		title: '',
+		number: '',
+		add1: '',
+		add2: '',
+		city: '',
+		state: '',
+		country: '',
+		terms: false,
+		policy: false,
+		profile: '',
+		orgType: '',
+		orgName: '',
+		orgAddress: '',
+		website: '',
+		zip: '',
 	};
 
 	nextPage = () => {
 		const { page } = this.state;
 		this.setState({ page: page + 1 });
+	};
+
+	prevPage = () => {
+		const { page } = this.state;
+		this.setState({ page: page - 1 });
 	};
 
 	pageOneOptions = (e) => {
@@ -45,6 +68,11 @@ class RequestPage extends Component {
 		}
 	};
 
+	handleInput = (e) => {
+		const { value, name } = e.target;
+		this.setState({ [name]: value });
+	};
+
 	addOffer = (value) => {
 		const { offers } = this.state;
 		const selectedOption = offerOptions[value];
@@ -59,6 +87,49 @@ class RequestPage extends Component {
 		const index = offers.indexOf(unselectedoption);
 		offers.splice(index, 1);
 		this.setState({ offers });
+	};
+
+	submit = () => {
+		const {
+			title,
+			firstName,
+			lastName,
+			email,
+			number,
+			profile,
+			orgType,
+			orgName,
+			add1,
+			add2,
+			city,
+			state,
+			zip,
+			country,
+			website,
+			terms,
+			policy,
+			offers,
+		} = this.state;
+		const word = `Registration Successful.
+            
+            ${title} ${firstName} ${lastName}
+
+            Your contact information:
+
+            ${email} ${number}
+
+            Your Link : ${profile}
+
+
+            Your Organization is a ${orgType} type, ${orgName} located at ${add1} ${add2}, ${state}, ${city} ${country} with a website ${website} and ZIP:${zip}
+
+            Terms and Conditions is ${terms} and Privacy Policy is ${policy}.
+
+            You selected the products: 
+
+            ${offers.map((offer) => offer.title)}
+            `;
+		alert(word);
 	};
 
 	render() {
@@ -78,14 +149,9 @@ class RequestPage extends Component {
 							disableButton={offers.length ? false : true}
 						/>
 					) : page === 3 ? (
-						<FormThree
-							options={this.pageOneOptions}
-							next={this.nextPage}
-							offerOptions={offerOptions}
-							disableButton={offers.length ? false : true}
-						/>
+						<FormThree handleInput={this.handleInput} submit={this.submit} back={this.prevPage} />
 					) : (
-						alert('Hey there')
+						<></>
 					)}
 				</div>
 			</div>

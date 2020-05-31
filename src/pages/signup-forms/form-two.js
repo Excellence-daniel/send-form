@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function FormThree(props) {
+	const { handleInput, submit, back } = props;
 	return (
 		<div className="forms">
 			<div className="container-fluid">
@@ -18,23 +19,48 @@ export default function FormThree(props) {
 										<div className="form">
 											<p>
 												<label>First Name</label>
-												<input className="send-form-input" placeholder="First Name"></input>
+												<input
+													className="send-form-input"
+													placeholder="First Name"
+													name="firstName"
+													onChange={handleInput}
+												></input>
 											</p>
 											<p>
 												<label>Last Name</label>
-												<input className="send-form-input" placeholder="Last Name"></input>
+												<input
+													className="send-form-input"
+													placeholder="Last Name"
+													name="lastName"
+													onChange={handleInput}
+												></input>
 											</p>
 											<p>
 												<label>Title</label>
-												<input className="send-form-input" placeholder="Title"></input>
+												<input
+													className="send-form-input"
+													placeholder="Title"
+													name="title"
+													onChange={handleInput}
+												></input>
 											</p>
 											<p>
 												<label>Email Address</label>
-												<input className="send-form-input" placeholder="Email Address"></input>
+												<input
+													className="send-form-input"
+													placeholder="Email Address"
+													name="email"
+													onChange={handleInput}
+												></input>
 											</p>
 											<p>
 												<label>Phone Number</label>
-												<input className="send-form-input" placeholder="Phone Number"></input>
+												<input
+													className="send-form-input"
+													placeholder="Phone Number"
+													name="number"
+													onChange={handleInput}
+												></input>
 											</p>
 											<br />
 											<div>
@@ -42,6 +68,8 @@ export default function FormThree(props) {
 												<input
 													className="send-form-input"
 													placeholder="Requester Profile (LinkedIn, Organization Page e.t.c)"
+													name="profile"
+													onChange={handleInput}
 												></input>
 											</div>
 										</div>
@@ -58,13 +86,18 @@ export default function FormThree(props) {
 										<div className="form">
 											<p>
 												<label>Organization Type</label>
-												<select className="send-form-input" placeholder="Organization Type">
+												<select
+													className="send-form-input"
+													placeholder="Organization Type"
+													name="orgType"
+													onChange={handleInput}
+												>
 													<option disabled selected>
 														Organization Type
 													</option>
-													<option>Supplier</option>
-													<option>Manufacturer</option>
-													<option>Individual</option>
+													<option value="Supplier">Supplier</option>
+													<option value="Manufacturer">Manufacturer</option>
+													<option value="Individual">Individual</option>
 												</select>
 											</p>
 											<p>
@@ -72,6 +105,8 @@ export default function FormThree(props) {
 												<input
 													className="send-form-input"
 													placeholder="Organization Name"
+													name="orgName"
+													onChange={handleInput}
 												></input>
 											</p>
 											<p>
@@ -79,6 +114,8 @@ export default function FormThree(props) {
 												<input
 													className="send-form-input"
 													placeholder="Organization Website"
+													name="website"
+													onChange={handleInput}
 												></input>
 											</p>
 											<h5>Location</h5>
@@ -87,6 +124,8 @@ export default function FormThree(props) {
 												<input
 													className="send-form-input"
 													placeholder="Street Address, P.O Box, company name, c/o"
+													name="add1"
+													onChange={handleInput}
 												></input>
 											</p>
 											<p>
@@ -94,26 +133,45 @@ export default function FormThree(props) {
 												<input
 													className="send-form-input"
 													placeholder="Apartment, suite, unit, building, floor, e.t.c"
+													name="add2 "
+													onChange={handleInput}
 												></input>
 											</p>
 											<p>
 												<label>City</label>
-												<input className="send-form-input" placeholder="City"></input>
+												<input
+													className="send-form-input"
+													placeholder="City"
+													name="city"
+													onChange={handleInput}
+												></input>
 											</p>
 											<p>
 												<label>State/Province/Region</label>
 												<input
 													className="send-form-input"
 													placeholder="State/Province/Region"
+													name="state"
+													onChange={handleInput}
 												></input>
 											</p>
 											<p>
 												<label>ZIP</label>
-												<input className="send-form-input" placeholder="ZIP"></input>
+												<input
+													className="send-form-input"
+													placeholder="ZIP"
+													name="zip"
+													onChange={handleInput}
+												></input>
 											</p>
 											<p>
 												<label>Country</label>
-												<input className="send-form-input" placeholder="Country"></input>
+												<input
+													className="send-form-input"
+													placeholder="Country"
+													name="country"
+													onChange={handleInput}
+												></input>
 											</p>
 										</div>
 									</div>
@@ -133,13 +191,25 @@ export default function FormThree(props) {
 											requests.
 										</p>
 										<div class="form-group form-check">
-											<input type="checkbox" class="form-check-input" id="check1" />
+											<input
+												type="checkbox"
+												class="form-check-input"
+												id="check1"
+												name="terms"
+												onClick={handleInput}
+											/>
 											<label class="form-check-label" for="check1">
 												I hereby agree to the <span>Terms & Conditions</span>
 											</label>
 										</div>
 										<div class="form-group form-check">
-											<input type="checkbox" class="form-check-input" id="check2" />
+											<input
+												type="checkbox"
+												class="form-check-input"
+												id="check2"
+												name="policy"
+												onClick={handleInput}
+											/>
 											<label class="form-check-label" for="check2">
 												I hereby agree to the <span>Privacy Policy</span>
 											</label>
@@ -148,8 +218,12 @@ export default function FormThree(props) {
 								</div>
 							</div>
 							<div className="finish">
-								<button className="back-button btn-secondary btn-lg">Back</button>
-								<button className="submit-button btn-success btn-lg">Submit</button>
+								<button className="back-button btn-secondary btn-lg" onClick={back}>
+									Back
+								</button>
+								<button className="submit-button btn-success btn-lg" onClick={submit}>
+									Submit
+								</button>
 							</div>
 						</div>
 						<div className="col-md-3"></div>
