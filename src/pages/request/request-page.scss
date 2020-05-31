@@ -1,3 +1,5 @@
+@import '../../assets/css/partials/mixins';
+
 .request-page {
 	.form-header {
 		background: #fff;
@@ -31,11 +33,21 @@
 				margin-top: 2rem;
 				margin-bottom: 3rem;
 
+				@include screen(small) {
+					display: grid !important;
+				}
+
 				.card {
 					width: 24rem;
 					box-shadow: 4px 4px 12px 0 #eaf2fd;
 					border: 2px solid #eaf2fd;
 					margin: 2%;
+
+					@include screen(small) {
+						margin: 0;
+						width: 27rem;
+						margin-bottom: 2rem;
+					}
 
 					.card-body {
 						padding-right: 10px;
@@ -68,15 +80,13 @@
 
 		.forms {
 			.big-card {
-				margin-top: 4rem;
 				.card {
-					max-height: 50rem;
-					// height: 40rem;
 					padding: 1rem;
+					margin-top: 4rem;
 
 					.card-title {
 						padding-top: 2rem;
-						font-size: 17px;
+						font-size: 19px;
 						font-weight: 600;
 					}
 
@@ -85,6 +95,11 @@
 						font-size: 15px;
 						color: #212529 !important;
 						line-height: 40px;
+					}
+
+					.card-subhead {
+						font-size: 17px;
+						font-weight: 600;
 					}
 
 					.options {
@@ -111,6 +126,10 @@
 							text-align: left;
 							border-radius: 0.25rem;
 
+							@include screen(small) {
+								width: 100%;
+							}
+
 							h5 {
 								font-size: 16px;
 								color: #304256;
@@ -129,6 +148,52 @@
 							}
 						}
 					}
+
+					.form {
+						p {
+							margin-top: 15px;
+
+							label {
+								font-size: 80%;
+								font-weight: 300;
+							}
+						}
+
+						.proof {
+							margin-bottom: 1rem;
+						}
+
+						.send-form-input {
+							display: block;
+							width: 50%;
+							height: calc(1.5em + 0.75rem + 4px);
+							padding: 0.375rem 0.75rem;
+							font-size: 1rem;
+							font-weight: 300;
+							line-height: 1.5;
+							color: #495057;
+							background-color: #fff;
+							background-clip: padding-box;
+							border: 2px solid #ced4da;
+							border-radius: 0.25rem;
+							transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+							border-color: #eaf2fd !important;
+
+							@include screen(small) {
+								width: 100%;
+							}
+						}
+					}
+				}
+
+				.terms {
+					p {
+						font-weight: 200;
+					}
+
+					span {
+						color: #2f80ed;
+					}
 				}
 
 				.next-button {
@@ -140,6 +205,23 @@
 					margin-top: 1rem;
 					position: sticky;
 					left: 100%;
+				}
+
+				.finish {
+					display: flex;
+					justify-content: flex-end;
+					margin-top: 15px;
+
+					button {
+						font-size: 14px;
+						padding: 17px 30px;
+						margin: 5px;
+						font-weight: 700;
+
+						&:focus {
+							outline: none;
+						}
+					}
 				}
 			}
 		}
