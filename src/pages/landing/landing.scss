@@ -115,9 +115,11 @@
 
 			&:hover {
 				background-color: #fff;
-				a {
-					-webkit-text-fill-color: #2f80ed !important;
-				}
+				-webkit-text-fill-color: #2f80ed !important;
+			}
+
+			&:focus {
+				outline: 0;
 			}
 		}
 	}

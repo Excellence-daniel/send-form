@@ -65,7 +65,10 @@ export default function LandingPage() {
 
 				<div className="section-two">
 					<h4>Have Supplies? </h4>
-					<button className="supply-button">Supply Medical Equipment</button>
+
+					<Link to="/request">
+						<button className="supply-button">Supply Medical Equipment</button>
+					</Link>
 				</div>
 
 				<div className="section-three">
