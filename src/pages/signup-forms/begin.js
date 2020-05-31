@@ -1,6 +1,7 @@
 import React from 'react';
 
-export default function BeginSignUp() {
+export default function BeginSignUp(props) {
+	const { next } = props;
 	return (
 		<div className="container-fluid">
 			<div className="row">
@@ -10,29 +11,31 @@ export default function BeginSignUp() {
 					<h5>Here are the next steps:</h5>
 					<div className="instruction-cards">
 						<div className="card">
-							<div class="card-body">
-								<h5 class="card-title">Sign up</h5>
-								<h6 class="card-subtitle mb-2 text-muted">
+							<div className="card-body">
+								<h5 className="card-title">Sign up</h5>
+								<h6 className="card-subtitle mb-2 text-muted">
 									<br />
 								</h6>
-								<p class="card-text">
+								<p className="card-text">
 									Create an account and complete your request in less than 3 minutes.
 								</p>
 							</div>
 						</div>
 						<div className="card">
-							<div class="card-body">
-								<h5 class="card-title">Match with suppliers</h5>
-								<h6 class="card-subtitle mb-2 text-muted">
+							<div className="card-body">
+								<h5 className="card-title">Match with suppliers</h5>
+								<h6 className="card-subtitle mb-2 text-muted">
 									<br />
 								</h6>
-								<p class="card-text">
+								<p className="card-text">
 									After completing your request, we’ll notify relevant suppliers to start bidding.
 								</p>
 							</div>
 						</div>
 					</div>
-					<button className="start-button"> Start </button>
+					<button className="start-button" onClick={next}>
+						Start
+					</button>
 				</div>
 				<div className="col-md-2"></div>
 			</div>

@@ -65,5 +65,83 @@
 				padding: 0.375rem 0.75rem;
 			}
 		}
+
+		.forms {
+			.big-card {
+				margin-top: 4rem;
+				.card {
+					max-height: 50rem;
+					// height: 40rem;
+					padding: 1rem;
+
+					.card-title {
+						padding-top: 2rem;
+						font-size: 17px;
+						font-weight: 600;
+					}
+
+					.card-subtitle {
+						font-weight: 300;
+						font-size: 15px;
+						color: #212529 !important;
+						line-height: 40px;
+					}
+
+					.options {
+						display: flex;
+						justify-content: space-around;
+						flex-wrap: wrap;
+						.active {
+							background: #f5f8fd !important;
+							border: 2px solid #2f80ed !important;
+							h5 {
+								-webkit-text-fill-color: #2f80ed !important;
+							}
+						}
+
+						button {
+							display: flex;
+							align-items: baseline;
+							border: 2px solid #eaf2fd;
+							background-color: transparent !important;
+							background: transparent;
+							width: 22rem;
+							padding: 15px;
+							margin-top: 2rem;
+							text-align: left;
+							border-radius: 0.25rem;
+
+							h5 {
+								font-size: 16px;
+								color: #304256;
+							}
+
+							h6 {
+								font-size: 13px;
+								color: #6984a3 !important;
+								margin-left: 10px;
+							}
+
+							&:disabled {
+								border: 1px solid #999999;
+								background-color: #cccccc;
+								color: #666666;
+							}
+						}
+					}
+				}
+
+				.next-button {
+					font-size: 15px;
+					font-weight: 700;
+					border-radius: 5px;
+					height: 4rem;
+					width: 8rem;
+					margin-top: 1rem;
+					position: sticky;
+					left: 100%;
+				}
+			}
+		}
 	}
 }
